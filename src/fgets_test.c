@@ -12,6 +12,12 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	// setvbuf(stdout, NULL, _IONBF, 0);
+	char buf[10];
+	const int size = sizeof(buf);
+	fgets(buf, size, stdin);
+	puts(buf);
+	fgets(buf, size, stdin);
+	puts(buf);
 	return EXIT_SUCCESS;
 }
