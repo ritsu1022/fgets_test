@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	// setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stdout, NULL, _IONBF, 0);
 	char buf[10];
 	const int size = sizeof(buf);
 	fgets(buf, size, stdin);
